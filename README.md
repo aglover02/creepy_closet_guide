@@ -1,2 +1,2 @@
-# creepy_closet_guide
-This was a project for Web235
+# The Creepy Closet Guide
+This was a project for Web235.
