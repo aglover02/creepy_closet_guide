@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Style quiz results page showing the visitor's answers and a starter outfit recommendation.">
+  <title>The Creepy Closet Guide | Quiz Results</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <div class="header-logo-row">
+        <a href="index.html">
+          <img src="creepyCloset.png" alt="The Creepy Closet Guide logo" class="site-logo logo-left">
+        </a>
+
+        <div class="header-text">
+          <h1><a href="index.html">The Creepy Closet Guide</a></h1>
+          <p class="tagline">Your style quiz results.</p>
+        </div>
+
+        <a href="index.html">
+          <img src="creepyCloset.png" alt="The Creepy Closet Guide logo" class="site-logo logo-right">
+        </a>
+      </div>
+    </header>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="outfit_formulas.html">Outfit Formulas</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="capsule_wardrobe.html">Capsule Wardrobe</a></li>
+        <li><a href="mix_match.html">Mix &amp; Match</a></li>
+        <li><a href="quiz.html">Style Quiz</a></li>
+      </ul>
+    </nav>
+
+    <main class="two-col-layout">
+      <section class="main-content box">
+        <h2>Quiz Results</h2>
+
+        <p><strong>Name:</strong> <span id="resultName"></span></p>
+        <p><strong>Style Vibe:</strong> <span id="resultStyle"></span></p>
+        <p><strong>Occasion:</strong> <span id="resultOccasion"></span></p>
+        <p><strong>Comfort Priority:</strong> <span id="resultComfort"></span></p>
+        <p><strong>Color Palette:</strong> <span id="resultColor"></span></p>
+        <p><strong>Boldness:</strong> <span id="resultBoldness"></span></p>
+        <p><strong>Favorite Accessory:</strong> <span id="resultAccessory"></span></p>
+        <p><strong>Favorite Clothing Piece:</strong> <span id="resultFavorite"></span></p>
+        <p><strong>Anything to Avoid:</strong> <span id="resultAvoid"></span></p>
+
+        <h3>Your Starter Recommendation</h3>
+        <p id="recommendationText"></p>
+      </section>
+      
+      <aside class="sidebar box">
+        <h2>Next Step</h2>
+        <p>
+          Use your result as a starting point, then visit the Outfit Formulas and
+          Lookbook pages to find combinations that match your vibe more specifically.
+        </p>
+        
+        <img loading="lazy" src="results_outfit.jpg" alt="Alternative outfit inspiration with dark clothing and layered accessories" class="sidebar-img">
+      </aside>    
+    </main>
+
+    <footer>
+      <p>&copy; 2026 The Creepy Closet Guide</p>
+      <p class="footer-tagline">Outfit ideas, styling help, and alt fashion inspiration.</p>
+      <p class="footer-links">
+        <a href="guides.html">Guides</a> |
+        <a href="outfit_formulas.html">Outfit Formulas</a> |
+        <a href="capsule_wardrobe.html">Capsule Wardrobe</a> |
+        <a href="lookbook.html">Lookbook</a> |
+        <a href="mix_match.html">Mix &amp; Match</a> |
+        <a href="quiz.html">Style Quiz</a>
+      </p>
+    </footer>
+
+    <button id="backToTop" aria-label="Back to top">↑</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="main.js"></script>
+  <script src="results.js"></script>
+</body>
+</html>

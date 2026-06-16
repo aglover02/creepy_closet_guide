@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive mix and match page for combining tops, bottoms, and shoes to build an alternative outfit.">
+  <title>The Creepy Closet Guide | Mix and Match</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <div class="header-logo-row">
+        <a href="index.html">
+          <img loading="lazy" src="creepyCloset.png" alt="The Creepy Closet Guide logo" class="site-logo logo-left">
+        </a>
+        
+        <div class="header-text">
+          <h1><a href="index.html">The Creepy Closet Guide</a></h1>
+          <p class="tagline">Alternative outfit help for goth, punk, and streetwear looks.</p>
+        </div>
+        
+        <a href="index.html">
+          <img loading="lazy" src="creepyCloset.png" alt="The Creepy Closet Guide logo" class="site-logo logo-right">
+        </a>
+  </div>
+</header>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="outfit_formulas.html">Outfit Formulas</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="capsule_wardrobe.html">Capsule Wardrobe</a></li>
+        <li><a href="mix_match.html">Mix &amp; Match</a></li>
+        <li><a href="quiz.html">Style Quiz</a></li>
+      </ul>
+    </nav>
+
+    <main class="two-col-layout">
+      <section class="main-content box">
+        <h2>Mix and Match</h2>
+        <p>
+          Use the arrows to browse through tops, bottoms, and shoes. Try changing one
+          category at a time to see how the outfit shifts.
+        </p>
+
+        <div class="mix-stack">
+          <div class="mix-row">
+            <button class="arrow-btn" id="prevTop" aria-label="Previous top">&#10094;</button>  
+              <img loading="lazy" id="topImage" src="top01.jpg" alt="Crocheted red tank top.">
+            <button class="arrow-btn" id="nextTop" aria-label="Next top">&#10095;</button>
+          </div>
+
+          <div class="mix-row">
+            <button class="arrow-btn" id="prevBottom" aria-label="Previous bottom">&#10094;</button>
+            <img loading="lazy" id="bottomImage" src="bottom01.jpg" alt="Black pleated mini skirt.">
+            <button class="arrow-btn" id="nextBottom" aria-label="Next bottom">&#10095;</button>
+          </div>
+
+          <div class="mix-row">
+            <button class="arrow-btn" id="prevShoes" aria-label="Previous shoes">&#10094;</button>
+            <img loading="lazy" id="shoeImage" src="shoe01.jpg" alt="Black pvc thigh high, lace-up platform boots.">
+            <button class="arrow-btn" id="nextShoes" aria-label="Next shoes">&#10095;</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="sidebar-column">
+        <section class="box">
+          <h2>Styling Tips</h2>
+          <ul class="mix-tips">
+            <li>Try changing only one category at a time to see what affects the outfit most.</li>
+            <li>Chunkier shoes can make an outfit feel heavier and more dramatic.</li>
+            <li>A fitted top with looser bottoms creates a different silhouette than an oversized top with slimmer bottoms.</li>
+            <li>Repeating dark colors can make mixed pieces feel more cohesive.</li>
+            <li>Even simple basics can feel more intentional when the proportions work together.</li>
+          </ul>
+        </section>
+
+        <section class="box">
+          <h2>Try These Combos</h2>
+          <ul class="mix-tips">
+            <li>Dark fitted top + plaid skirt + combat boots</li>
+            <li>Oversized top + cargo pants + chunky sneakers</li>
+            <li>Mesh top + wide-leg pants + platforms</li>
+            <li>Simple black top + dark jeans + heavy boots</li>
+            <li>Graphic top + loose pants + dark sneakers</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 The Creepy Closet Guide</p>
+      <p class="footer-tagline">Outfit ideas, styling help, and alt fashion inspiration.</p>
+      <p class="footer-links">
+        <a href="guides.html">Guides</a> |
+        <a href="outfit_formulas.html">Outfit Formulas</a> |
+        <a href="capsule_wardrobe.html">Capsule Wardrobe</a> |
+        <a href="lookbook.html">Lookbook</a> |
+        <a href="mix_match.html">Mix &amp; Match</a> |
+        <a href="quiz.html">Style Quiz</a>
+      </p>
+    </footer>
+    <button id="backToTop" aria-label="Back to top">↑</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

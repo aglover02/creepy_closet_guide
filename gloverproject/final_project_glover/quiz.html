@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Take the Creepy Closet Guide style quiz to get a starter outfit recommendation based on your vibe, occasion, and comfort needs.">
+  <title>The Creepy Closet Guide | Style Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="wrapper"> 
+    <header>
+      <div class="header-logo-row">
+        <a href="index.html">
+          <img loading="lazy" src="creepyCloset.png" alt="The Creepy Closet Guide logo" class="site-logo logo-left">
+        </a>
+        
+        <div class="header-text">
+          <h1><a href="index.html">The Creepy Closet Guide</a></h1>
+          <p class="tagline">Alternative outfit help for goth, punk, and streetwear looks.</p>
+        </div>
+        
+        <a href="index.html">
+          <img loading="lazy" src="creepyCloset.png" alt="The Creepy Closet Guide logo" class="site-logo logo-right">
+        </a>
+      </div>
+    </header>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="outfit_formulas.html">Outfit Formulas</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="capsule_wardrobe.html">Capsule Wardrobe</a></li>
+        <li><a href="mix_match.html">Mix &amp; Match</a></li>
+        <li><a href="quiz.html">Style Quiz</a></li>
+      </ul>
+    </nav>
+
+    <main class="two-col-layout">
+      <section class="main-content box">
+        <h2>Style Quiz</h2>
+        <p>
+          Fill out this form to get a quick recommendation based on your preferred
+          style, occasion, comfort needs, and favorite clothing piece.
+        </p>
+        
+        <form id="styleQuiz" action="results.html" method="get" novalidate>
+          <div class="form-row">
+            <label for="userName">Name</label>
+            <input type="text" name="userName" id="userName">
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="styleVibe">Preferred Style Vibe</label>
+            <select name="styleVibe" id="styleVibe">
+              <option value="">Choose one</option>
+              <option value="goth">Goth</option>
+              <option value="punk">Punk</option>
+              <option value="streetwear">Streetwear</option>
+              <option value="grunge">Grunge</option>
+              <option value="emo">Emo</option>
+              <option value="industrial">Industrial</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="occasion">Occasion</label>
+            <select name="occasion" id="occasion">
+              <option value="">Choose one</option>
+              <option value="everyday">Everyday</option>
+              <option value="school">School</option>
+              <option value="work">Work</option>
+              <option value="date">Date</option>
+              <option value="concert">Concert</option>
+              <option value="going out">Going Out</option>
+              <option value="lazy day">Lazy Day</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="comfortPriority">Comfort Priority</label>
+            <select name="comfortPriority" id="comfortPriority">
+              <option value="">Choose one</option>
+              <option value="loose fit">Loose Fit</option>
+              <option value="stretchy">Stretchy</option>
+              <option value="soft fabrics">Soft Fabrics</option>
+              <option value="breathable">Breathable</option>
+              <option value="warm layers">Warm Layers</option>
+              <option value="easy to move in">Easy to Move In</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="colorPalette">Favorite Color Palette</label>
+            <select name="colorPalette" id="colorPalette">
+              <option value="">Choose one</option>
+              <option value="black and silver">Black and Silver</option>
+              <option value="black and red">Black and Red</option>
+              <option value="black and purple">Black and Purple</option>
+              <option value="black and pastel">Black and Pastel</option>
+              <option value="earthy dark tones">Earthy Dark Tones</option>
+              <option value="all black">All Black</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="boldness">How bold do you want the outfit to be?</label>
+            <select name="boldness" id="boldness">
+              <option value="">Choose one</option>
+              <option value="subtle">Subtle</option>
+              <option value="balanced">Balanced</option>
+              <option value="dramatic">Dramatic</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="accessory">Favorite Accessory</label>
+            <select name="accessory" id="accessory">
+              <option value="">Choose one</option>
+              <option value="choker">Choker</option>
+              <option value="chain belt">Chain Belt</option>
+              <option value="layered jewelry">Layered Jewelry</option>
+              <option value="platform shoes">Platform Shoes</option>
+              <option value="fishnets">Fishnets</option>
+              <option value="statement bag">Statement Bag</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="favoritePiece">Favorite Clothing Piece</label>
+            <input type="text" name="favoritePiece" id="favoritePiece" placeholder="Example: oversized hoodie, maxi skirt, boots">
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="avoidPiece">Anything you want to avoid?</label>
+            <input type="text" name="avoidPiece" id="avoidPiece" placeholder="Example: tight jeans, heels, short skirts">
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-buttons">
+            <input type="submit" value="Get Recommendation">
+            <input type="reset" value="Clear Form">
+          </div>
+        </form>
+      </section>
+
+      <aside class="sidebar box">
+        <h2>What this page does</h2>
+        <p>This quiz helps visitors build a starter outfit idea based on their style,
+        occasion, comfort needs, color preferences, favorite accessories, and clothing
+        pieces they already like.</p>
+        <p>After submitting the form, the results page summarizes their answers and gives
+        them a personalized outfit direction.</p>
+        <img loading="lazy" src="quiz_outfit.jpg" alt="Person sitting on a train wearing a black leather jacket with spikes and chains, red plaid pants, black boots, and a skull graphic shirt.">
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 The Creepy Closet Guide</p>
+      <p class="footer-tagline">Outfit ideas, styling help, and alt fashion inspiration.</p>
+      <p class="footer-links">
+        <a href="guides.html">Guides</a> |
+        <a href="outfit_formulas.html">Outfit Formulas</a> |
+        <a href="capsule_wardrobe.html">Capsule Wardrobe</a> |
+        <a href="lookbook.html">Lookbook</a> |
+        <a href="mix_match.html">Mix &amp; Match</a> |
+        <a href="quiz.html">Style Quiz</a>
+      </p>
+    </footer>
+    <button id="backToTop" aria-label="Back to top">↑</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="quiz.js"></script>
+</body>
+</html>

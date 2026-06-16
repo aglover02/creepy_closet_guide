@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Outfit formulas for alternative looks with simple combinations for everyday wear, school, work, concerts, and more.">
+  <title>The Creepy Closet Guide | Outfit Formulas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <div class="header-logo-row">
+        <a href="index.html">
+          <img loading="lazy" src="creepyCloset.png" alt="The Creepy Closet Guide logo" class="site-logo logo-left">
+        </a>
+
+        <div class="header-text">
+          <h1><a href="index.html">The Creepy Closet Guide</a></h1>
+          <p class="tagline">Use simple outfit formulas to put together alternative looks without overthinking it.</p>
+        </div>
+        
+        <a href="index.html">
+          <img loading="lazy" src="creepyCloset.png" alt="The Creepy Closet Guide logo" class="site-logo logo-right">
+        </a>
+      </div>
+    </header>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="outfit_formulas.html">Outfit Formulas</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="capsule_wardrobe.html">Capsule Wardrobe</a></li>
+        <li><a href="mix_match.html">Mix &amp; Match</a></li>
+        <li><a href="quiz.html">Style Quiz</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div id="vueFormulaApp">
+        <section class="box formula-main-box">
+          <h2>Outfit Formulas</h2>
+          <p>
+            Outfit formulas are simple clothing combinations that make getting dressed easier.
+            Instead of starting from scratch every time, you can use a basic structure and then
+            swap in your own favorite pieces, layers, shoes, and accessories.
+          </p>
+          <p>
+            Click a category below to explore different types of formulas for everyday outfits,
+            school, concerts, weather, comfort, and more.
+          </p>
+
+          <div class="filter-buttons">
+            <button
+              v-for="category in categories"
+              v-bind:key="category.id"
+              v-on:click="selectedId = category.id"
+              v-bind:class="{ 'active-btn': selectedId === category.id }"
+              class="formula-btn">
+              {{ category.label }}
+            </button>
+          </div>
+        </section>
+
+        <section class="box formula-extra-box">
+          <h2>{{ selectedCategory.heading }}</h2>
+
+          <div class="formula-layout">
+            <div>
+              <p class="formula-description">
+                {{ selectedCategory.description }}
+              </p>
+
+              <h3>Formula List</h3>
+              <ul class="formula-list">
+                <li v-for="formula in selectedCategory.formulas" v-bind:key="formula">
+                  {{ formula }}
+                </li>
+              </ul>
+
+              <h3>Key Pieces</h3>
+              <ul class="formula-list">
+                <li v-for="piece in selectedCategory.keyPieces" v-bind:key="piece">
+                  {{ piece }}
+                </li>
+              </ul>
+            </div>
+
+            <div class="formula-side">
+              <img loading="lazy" 
+                v-bind:src="selectedCategory.image"
+                v-bind:alt="selectedCategory.alt">
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="formula-bottom-grid formula-extra-box">
+        <div class="box">
+          <h2>Styling Tips</h2>
+          <ul class="formula-list">
+            <li>Try balancing one fitted piece with one looser piece for a stronger silhouette.</li>
+            <li>Shoes can change the mood of the same outfit very quickly.</li>
+            <li>Repeating colors can help mixed pieces feel more intentional.</li>
+            <li>Accessories are useful when an outfit feels too plain.</li>
+            <li>Outer layers often do a lot of the visual work in alternative outfits.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h2>Starter Combos</h2>
+          <ul class="formula-list">
+            <li>Dark fitted top + plaid skirt + combat boots</li>
+            <li>Oversized hoodie + cargos + chunky sneakers</li>
+            <li>Mesh top + wide-leg pants + platforms</li>
+            <li>Simple black top + dark jeans + heavy boots</li>
+            <li>Long skirt + fitted top + tall boots + silver jewelry</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 The Creepy Closet Guide</p>
+      <p class="footer-tagline">Outfit ideas, styling help, and alt fashion inspiration.</p>
+      <p class="footer-links">
+        <a href="guides.html">Guides</a> |
+        <a href="outfit_formulas.html">Outfit Formulas</a> |
+        <a href="capsule_wardrobe.html">Capsule Wardrobe</a> |
+        <a href="lookbook.html">Lookbook</a> |
+        <a href="mix_match.html">Mix &amp; Match</a> |
+        <a href="quiz.html">Style Quiz</a>
+      </p>
+    </footer>
+    <button id="backToTop" aria-label="Back to top">↑</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="main.js"></script>
+  <script src="formula_vue.js"></script>
+</body>
+</html>
